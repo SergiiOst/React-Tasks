@@ -1,10 +1,10 @@
-import Form from "./Form/Form";
+import MyForm from "./Form/Form";
 
 const App = () => {
   return (
     <>
       <p>Hello world!</p>
-      <Form />
+      <MyForm />
     </>
   );
 };
