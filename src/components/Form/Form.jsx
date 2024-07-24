@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import s from "./Form.module.css";
 
 const MyForm = () => {
   const schema = Yup.object({
@@ -38,28 +39,28 @@ const MyForm = () => {
         validationSchema={schema}
         initialValues={initialValues}
         onSubmit={handleSubmit}>
-        <Form>
-          <label>
+        <Form className={s.form}>
+          <label className={s.label}>
             <span>Name:</span>
             <Field name="name" />
             <ErrorMessage name="name" />
           </label>
-          <label>
+          <label className={s.label}>
             <span>Surname:</span>
             <Field name="surname" />
             <ErrorMessage name="surname" />
           </label>
-          <label>
+          <label className={s.label}>
             <span>Age:</span>
             <Field name="age" />
             <ErrorMessage name="age" />
           </label>
-          <label>
+          <label className={s.label}>
             <span>Email:</span>
             <Field name="email" />
             <ErrorMessage name="email" />
           </label>
-          <label>
+          <label className={s.label}>
             <span>Role</span>
             <Field name="role" as="select">
               <option value="user">User</option>
@@ -67,7 +68,7 @@ const MyForm = () => {
             </Field>
             <ErrorMessage name="role" />
           </label>
-          <label>
+          <label className={s.label}>
             <span>About</span>
             <Field as="textarea" name="about"></Field>
             <ErrorMessage name="about" />
