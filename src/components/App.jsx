@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import Loader from "./Loader/Loader";
 
 const App = () => {
+  //==================== робота з бекендом, ГАЛЕРЕЯ ЗОБРАЖЕНЬ ========== axios , async/await=====================//
   const [hits, setHits] = useState([]);
   const [query, setQuery] = useState("react");
   const [isLoading, setIsLoading] = useState(false);
@@ -34,9 +35,11 @@ const App = () => {
     setHits([]);
     setPage(0);
   };
+  //=========================================================================================//
   return (
     <>
       <p>Hello world!</p>
+      {/* ========= робота з бекендом, ГАЛЕРЕЯ ЗОБРАЖЕНЬ ========== axios , async/await============  */}
       <SearchBar setQuery={handleSetQuery} />
       {isLoading && <Loader />}
       {isError && <h2>Something went wrong! Try again please</h2>}
@@ -44,7 +47,10 @@ const App = () => {
       {total > page && !isLoading && (
         <button onClick={() => setPage((prev) => prev + 1)}>Load more</button>
       )}
+
+      {/* ============ РОБОТА З ФОРМОЮ ====================== */}
       <MyForm />
+      {/* =========================================================== */}
     </>
   );
 };

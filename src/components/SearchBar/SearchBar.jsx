@@ -12,7 +12,11 @@ const SearchBar = ({ setQuery }) => {
     <div>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>
-          <Field name="query" placeholder="Type here to search" type="search" />
+          <Field
+            name="query"
+            placeholder="Search images and photos"
+            type="search"
+          />
           <button type="submit">Search</button>
         </Form>
       </Formik>
